@@ -17,6 +17,7 @@ func ConnectDb() {
 	if err != nil {
 		log.Fatal("Probleam loading .env")
 	}
+	fmt.Println("Nombre de la base de datos:", os.Getenv("DB_NAME"))
 	dsn := fmt.Sprintf(
 		"%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&parseTime=True&loc=Local",
 		os.Getenv("DB_USER"),
